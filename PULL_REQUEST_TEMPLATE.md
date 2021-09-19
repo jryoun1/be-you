@@ -22,12 +22,12 @@
 
 ### Check List
 
-[ ] title에 이슈 번호 (ex. #1 000 적용)
+- [ ] title에 이슈 번호 (ex. #number 000 적용)
 
-[ ] build 확인
+- [ ] build 확인
 
-[ ] assignees 지정
+- [ ] assignees 지정
 
-[ ] Labels 지정
+- [ ] Labels 지정
 
-[ ] Milestone 지정
+- [ ] Milestone 지정
