@@ -21,6 +21,7 @@
 		CEAE182A270ABA850048DAB8 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CEAE1829270ABA7B0048DAB8 /* NotoSansKR-Regular.otf */; };
 		CEAE182B270ABA870048DAB8 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CEAE1828270ABA6F0048DAB8 /* NotoSansKR-Bold.otf */; };
 		CEAE182D270ABC770048DAB8 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE182C270ABC770048DAB8 /* UIFontExtension.swift */; };
+		CEAE1830270ACB500048DAB8 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE182F270ACB500048DAB8 /* DateFormat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		CEAE1828270ABA6F0048DAB8 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		CEAE1829270ABA7B0048DAB8 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		CEAE182C270ABC770048DAB8 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		CEAE182F270ACB500048DAB8 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		DD5820D2AB627B7ED3AF6760 /* Pods_be_you.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_be_you.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 			children = (
 				CEAE1824270AAFBD0048DAB8 /* Main */,
 				CEAE1823270AAFB80048DAB8 /* Extension */,
+				CEAE182E270ACB360048DAB8 /* Utils */,
 				26E4D4C626EFABDE00315A67 /* AppDelegate.swift */,
 				26E4D4C826EFABDE00315A67 /* SceneDelegate.swift */,
 				26E4D4CF26EFABDF00315A67 /* Assets.xcassets */,
@@ -189,6 +192,14 @@
 				CEAE1828270ABA6F0048DAB8 /* NotoSansKR-Bold.otf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		CEAE182E270ACB360048DAB8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE182F270ACB500048DAB8 /* DateFormat.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		D3ACCB5E4E3E4C62F48C7ABA /* Frameworks */ = {
@@ -422,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAE1830270ACB500048DAB8 /* DateFormat.swift in Sources */,
 				26E4D4CB26EFABDE00315A67 /* MainViewController.swift in Sources */,
 				CEAE182D270ABC770048DAB8 /* UIFontExtension.swift in Sources */,
 				26E4D4C726EFABDE00315A67 /* AppDelegate.swift in Sources */,
