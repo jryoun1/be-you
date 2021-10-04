@@ -7,6 +7,7 @@
 
 import UIKit
 
+// TODO: add navigationBar icon
 class MainViewController: UIViewController {
     private enum Design {
         enum Text {
@@ -15,13 +16,22 @@ class MainViewController: UIViewController {
         }
 
         enum Color {
-            static let backgroundColor = UIColor(rgb: 0xF9F9F9)
+            static let background = UIColor(rgb: 0xF9F9F9)
+            static let descriptionText = UIColor(rgb: 0x8F8F8F)
+            static let dateText = UIColor(rgb: 0x626262)
+            static let addButton = UIColor(rgb: 0x626262)
+        }
+
+        enum Font {
+            static let description = UIFont(type: .regular, size: 14)
+            static let date = UIFont(type: .regular, size: 18)
+            static let day = UIFont(type: .regular, size: 15)
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Design.Color.backgroundColor
+        view.backgroundColor = Design.Color.background
         self.navigationItem.title = Design.Text.navigationTitle
     }
 }
