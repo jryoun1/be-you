@@ -13,11 +13,15 @@ class MainViewController: UIViewController {
             static let navigationTitle = "색상 기록"
             static let description = "한 주의 색상을 차근 차근 채워보세요☺️"
         }
+
+        enum Color {
+            static let backgroundColor = UIColor(rgb: 0xF9F9F9)
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = Design.Color.backgroundColor
         self.navigationItem.title = Design.Text.navigationTitle
     }
 }
