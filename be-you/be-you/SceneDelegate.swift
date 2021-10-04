@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  be-you
 //
-//  Created by Yeon on 2021/09/14.
+//  Created by wonhee on 2021/09/14.
 //
 
 import UIKit
@@ -17,8 +17,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         let mainViewController = MainViewController()
         let navigationViewController = UINavigationController(rootViewController: mainViewController)
+        settingNavigation(navigationViewController)
         window?.rootViewController = navigationViewController
         window?.makeKeyAndVisible()
+    }
+
+    private func settingNavigation(_ navigationViewController: UINavigationController) {
+        navigationViewController.navigationBar.shadowImage = UIImage()
+        navigationViewController.navigationBar.layer.shadowColor = UIColor(rgb: 0x9B9B9B).cgColor
+        navigationViewController.navigationBar.layer.shadowOpacity = 0.7
+        navigationViewController.navigationBar.layer.shadowOffset = CGSize.zero
+        navigationViewController.navigationBar.layer.shadowRadius = 5
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

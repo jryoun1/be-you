@@ -17,6 +17,7 @@
 		26E4D4E926EFABE000315A67 /* be_youUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4D4E826EFABE000315A67 /* be_youUITests.swift */; };
 		51257204AA2F5ED236796AE2 /* Pods_be_you_be_youUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0EFFD4EA35735D933D5653 /* Pods_be_you_be_youUITests.framework */; };
 		9A269A1169628A701F6C7879 /* Pods_be_youTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11B3E1E78824AF9C4A2C2FF /* Pods_be_youTests.framework */; };
+		CEAE1826270AAFCB0048DAB8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE1825270AAFCB0048DAB8 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		9E3082F98AA1B6B392744F18 /* Pods-be-youTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-be-youTests.debug.xcconfig"; path = "Target Support Files/Pods-be-youTests/Pods-be-youTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB9139791CDA86EFEA14641D /* Pods-be-you.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-be-you.release.xcconfig"; path = "Target Support Files/Pods-be-you/Pods-be-you.release.xcconfig"; sourceTree = "<group>"; };
 		C11B3E1E78824AF9C4A2C2FF /* Pods_be_youTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_be_youTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEAE1825270AAFCB0048DAB8 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		DD5820D2AB627B7ED3AF6760 /* Pods_be_you.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_be_you.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,9 +116,10 @@
 		26E4D4C526EFABDE00315A67 /* be-you */ = {
 			isa = PBXGroup;
 			children = (
+				CEAE1824270AAFBD0048DAB8 /* Main */,
+				CEAE1823270AAFB80048DAB8 /* Extension */,
 				26E4D4C626EFABDE00315A67 /* AppDelegate.swift */,
 				26E4D4C826EFABDE00315A67 /* SceneDelegate.swift */,
-				26E4D4CA26EFABDE00315A67 /* MainViewController.swift */,
 				26E4D4CF26EFABDF00315A67 /* Assets.xcassets */,
 				26E4D4D126EFABDF00315A67 /* LaunchScreen.storyboard */,
 				26E4D4D426EFABDF00315A67 /* Info.plist */,
@@ -153,6 +156,22 @@
 				102DED5ED86863EE73BE335A /* Pods-be-youTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CEAE1823270AAFB80048DAB8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE1825270AAFCB0048DAB8 /* UIColorExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CEAE1824270AAFBD0048DAB8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				26E4D4CA26EFABDE00315A67 /* MainViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		D3ACCB5E4E3E4C62F48C7ABA /* Frameworks */ = {
@@ -387,6 +406,7 @@
 				26E4D4CB26EFABDE00315A67 /* MainViewController.swift in Sources */,
 				26E4D4C726EFABDE00315A67 /* AppDelegate.swift in Sources */,
 				26E4D4C926EFABDE00315A67 /* SceneDelegate.swift in Sources */,
+				CEAE1826270AAFCB0048DAB8 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
