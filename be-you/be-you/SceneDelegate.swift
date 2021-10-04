@@ -14,6 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         static let navigationShadowOffset = CGSize.zero
         static let navigationShadowRadius: CGFloat = 5
 
+        static let navigationTintColor = UIColor(rgb: 0xF9F9F9)
         static let navigationTitleColor = UIColor(rgb: 0x7B7B7B)
         static let navigationTitleFont = UIFont(type: .bold, size: 17)
     }
@@ -38,6 +39,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         navigationViewController.navigationBar.layer.shadowOffset = Design.navigationShadowOffset
         navigationViewController.navigationBar.layer.shadowRadius = Design.navigationShadowRadius
         navigationViewController.navigationBar.layer.shadowPath = UIBezierPath(roundedRect: navigationViewController.navigationBar.bounds, cornerRadius: Design.navigationShadowRadius).cgPath
+        navigationViewController.navigationBar.barTintColor = Design.navigationTintColor
 
         if let navigationTitleFont = Design.navigationTitleFont {
             let attributes: [NSAttributedString.Key : Any] = [NSAttributedString.Key.font: navigationTitleFont, NSAttributedString.Key.foregroundColor: Design.navigationTitleColor]
