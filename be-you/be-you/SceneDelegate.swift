@@ -37,6 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         navigationViewController.navigationBar.layer.shadowOpacity = Design.navigationShadowOpacity
         navigationViewController.navigationBar.layer.shadowOffset = Design.navigationShadowOffset
         navigationViewController.navigationBar.layer.shadowRadius = Design.navigationShadowRadius
+        navigationViewController.navigationBar.layer.shadowPath = UIBezierPath(roundedRect: navigationViewController.navigationBar.bounds, cornerRadius: Design.navigationShadowRadius).cgPath
 
         let attributes = [NSAttributedString.Key.font: Design.navigationTitleFont, NSAttributedString.Key.foregroundColor: Design.navigationTitleColor]
         UINavigationBar.appearance().titleTextAttributes = attributes
