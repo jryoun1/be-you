@@ -15,6 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         static let navigationShadowRadius: CGFloat = 5
 
         static let navigationTitleColor = UIColor(rgb: 0x7B7B7B)
+        static let navigationTitleFont = UIFont(type: .bold, size: 17)
     }
 
     var window: UIWindow?
@@ -30,14 +31,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
     }
 
-    // TODO: navigationBar title Font
     private func settingNavigation(_ navigationViewController: UINavigationController) {
         navigationViewController.navigationBar.shadowImage = UIImage()
         navigationViewController.navigationBar.layer.shadowColor = Design.navigationShadowColor.cgColor
         navigationViewController.navigationBar.layer.shadowOpacity = Design.navigationShadowOpacity
         navigationViewController.navigationBar.layer.shadowOffset = Design.navigationShadowOffset
         navigationViewController.navigationBar.layer.shadowRadius = Design.navigationShadowRadius
-        navigationViewController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Design.navigationTitleColor]
+
+        let attributes = [NSAttributedString.Key.font: Design.navigationTitleFont, NSAttributedString.Key.foregroundColor: Design.navigationTitleColor]
+        UINavigationBar.appearance().titleTextAttributes = attributes
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
