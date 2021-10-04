@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
         enum Text {
             static let navigationTitle = "색상 기록"
             static let description = "한 주의 색상을 차근 차근 채워보세요☺️"
+            static let addButton = "+"
         }
 
         enum Color {
@@ -20,7 +21,8 @@ class MainViewController: UIViewController {
             static let descriptionText = UIColor(rgb: 0x8F8F8F)
             static let dateText = UIColor(rgb: 0x626262)
             static let line = UIColor(rgb: 0xAEAEAE)
-            static let addButton = UIColor(rgb: 0x626262)
+            static let addButtonBackground = UIColor(rgb: 0xBFF3F3F3)
+            static let addButton = UIColor(rgb: 0x8C8C8C)
         }
 
         enum Font {
@@ -32,11 +34,18 @@ class MainViewController: UIViewController {
         enum Constant {
             static let descriptionLabelTop: CGFloat = 65
             static let dateLabelTop: CGFloat = 60
-            static let lineHeight: CGFloat = 0.5
-            static let lineWidth: CGFloat = 100
             static let lineTop: CGFloat = 11
             static let dayTop: CGFloat = 28
+            static let addButtonBottom: CGFloat = 120
         }
+
+        enum Size {
+            static let lineHeight: CGFloat = 0.5
+            static let lineWidth: CGFloat = 100
+            static let addButton: CGFloat = 38
+        }
+
+        static let addButtonRadius: CGFloat = 16
     }
 
     private var descriptionLabel: UILabel = {
@@ -72,6 +81,17 @@ class MainViewController: UIViewController {
         return label
     }()
 
+    private var addButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle(Design.Text.addButton, for: .normal)
+        button.setTitleColor(Design.Color.addButton, for: .normal)
+        button.backgroundColor = Design.Color.addButtonBackground
+        button.clipsToBounds = true
+        button.layer.cornerRadius = Design.addButtonRadius
+        return button
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -99,14 +119,20 @@ class MainViewController: UIViewController {
         NSLayoutConstraint.activate([
             lineView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: Design.Constant.lineTop),
             lineView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            lineView.widthAnchor.constraint(equalToConstant: Design.Constant.lineWidth),
-            lineView.heightAnchor.constraint(equalToConstant: Design.Constant.lineHeight)
+            lineView.widthAnchor.constraint(equalToConstant: Design.Size.lineWidth),
+            lineView.heightAnchor.constraint(equalToConstant: Design.Size.lineHeight)
         ])
 
         view.addSubview(dayLabel)
         NSLayoutConstraint.activate([
             dayLabel.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: Design.Constant.dayTop),
             dayLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+
+        view.addSubview(addButton)
+        NSLayoutConstraint.activate([
+            addButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -Design.Constant.addButtonBottom),
+            addButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 }

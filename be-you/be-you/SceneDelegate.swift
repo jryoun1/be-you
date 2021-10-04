@@ -39,8 +39,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         navigationViewController.navigationBar.layer.shadowRadius = Design.navigationShadowRadius
         navigationViewController.navigationBar.layer.shadowPath = UIBezierPath(roundedRect: navigationViewController.navigationBar.bounds, cornerRadius: Design.navigationShadowRadius).cgPath
 
-        let attributes = [NSAttributedString.Key.font: Design.navigationTitleFont, NSAttributedString.Key.foregroundColor: Design.navigationTitleColor]
-        UINavigationBar.appearance().titleTextAttributes = attributes
+        if let navigationTitleFont = Design.navigationTitleFont {
+            let attributes: [NSAttributedString.Key : Any] = [NSAttributedString.Key.font: navigationTitleFont, NSAttributedString.Key.foregroundColor: Design.navigationTitleColor]
+            UINavigationBar.appearance().titleTextAttributes = attributes
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
