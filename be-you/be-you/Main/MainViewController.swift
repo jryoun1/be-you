@@ -132,6 +132,8 @@ class MainViewController: UIViewController {
         view.addSubview(addButton)
         NSLayoutConstraint.activate([
             addButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -Design.Constant.addButtonBottom),
+            addButton.widthAnchor.constraint(equalToConstant: Design.Size.addButton),
+            addButton.heightAnchor.constraint(equalToConstant: Design.Size.addButton),
             addButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
