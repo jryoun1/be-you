@@ -11,7 +11,7 @@
 | `Users`           | - 사용자가 설정한 profileImage와 설정 값을 가지고 있는 class 타입 |
 | `Days`            | - `Day` 를 배열로 가지는 class 타입                          |
 | `Day`             | - 하루를 기록할 수 있는 데이터를 가지는 class 타입           |
-| `Colorchips`      | - Emotion의 모든 감정들을 배열로 가지는 colorChips property가 있는 struct <br>- 색상을 추가하거나 삭제하는 메서드를 가진다 |
+| `Colorchips`      | - Emotion의 모든 감정들을 배열로 가지는 ColorChips property가 있는 class 타입 <br/>- 색상을 추가하거나 삭제하는 메서드를 가진다 |
 | `Emotion`         | - `Happy` , `Sad` , `Angry` 와 같은 enum 타입들을 가지는 enum 타입 |
 | `Happy`           | - `Happy` 감정의 color chip의 RGB 값을 가지는 enum 타입      |
 
@@ -55,21 +55,20 @@ final class Day {
 
 
 
-### Colorchips
+### ColorChips
 
 ```swift
-struct ColorChips {
+final class ColorChips {
 	var colorChips = [Emotion.list]
 
-	mutating func addColorChip() {
+	func addColorChip() {
     // TODO
   }
   
-  mutating func deleteColorChip() {
+  func deleteColorChip() {
     // TODO
   }
 }
-
 ```
 
 
