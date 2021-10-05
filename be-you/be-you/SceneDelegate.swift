@@ -2,21 +2,49 @@
 //  SceneDelegate.swift
 //  be-you
 //
-//  Created by Yeon on 2021/09/14.
+//  Created by wonhee on 2021/09/14.
 //
 
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    enum Design {
+        static let navigationShadowColor = UIColor(rgb: 0x9B9B9B)
+        static let navigationShadowOpacity: Float = 0.7
+        static let navigationShadowOffset = CGSize.zero
+        static let navigationShadowRadius: CGFloat = 5
+
+        static let navigationTintColor = UIColor(rgb: 0xF9F9F9)
+        static let navigationTitleColor = UIColor(rgb: 0x7B7B7B)
+        static let navigationTitleFont = UIFont(type: .bold, size: 17)
+    }
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
+        let mainViewController = MainViewController()
+        let navigationViewController = UINavigationController(rootViewController: mainViewController)
+        settingNavigation(navigationViewController)
+        window?.rootViewController = navigationViewController
+        window?.makeKeyAndVisible()
+    }
+
+    private func settingNavigation(_ navigationViewController: UINavigationController) {
+        navigationViewController.navigationBar.shadowImage = UIImage()
+        navigationViewController.navigationBar.layer.shadowColor = Design.navigationShadowColor.cgColor
+        navigationViewController.navigationBar.layer.shadowOpacity = Design.navigationShadowOpacity
+        navigationViewController.navigationBar.layer.shadowOffset = Design.navigationShadowOffset
+        navigationViewController.navigationBar.layer.shadowRadius = Design.navigationShadowRadius
+        navigationViewController.navigationBar.layer.shadowPath = UIBezierPath(roundedRect: navigationViewController.navigationBar.bounds, cornerRadius: Design.navigationShadowRadius).cgPath
+        navigationViewController.navigationBar.barTintColor = Design.navigationTintColor
+
+        if let navigationTitleFont = Design.navigationTitleFont {
+            let attributes: [NSAttributedString.Key : Any] = [NSAttributedString.Key.font: navigationTitleFont, NSAttributedString.Key.foregroundColor: Design.navigationTitleColor]
+            UINavigationBar.appearance().titleTextAttributes = attributes
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
