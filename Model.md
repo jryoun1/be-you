@@ -46,9 +46,9 @@ final class Days {
 
 ```swift
 final class Day {
-	var date: Date()
+	var date: Date = Date()
 	var hashtags: [String]?
-	var color: String?
+	var color: UIColor?
 	var diary: String?
 }
 ```
