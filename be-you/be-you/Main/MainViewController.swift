@@ -60,7 +60,7 @@ final class MainViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = Design.Font.date
-        label.text = DateFormat.ymd()
+        label.text = DateFormatter.dateToYMD.string(from: Date())
         label.textColor = Design.Color.dateText
         return label
     }()
@@ -76,7 +76,7 @@ final class MainViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = Design.Font.day
-        label.text = DateFormat.day()
+        label.text = DateFormatter.dateToDay.string(from: Date())
         label.textColor = Design.Color.dateText
         return label
     }()
