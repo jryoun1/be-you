@@ -12,7 +12,7 @@
 | `Days`            | - `Day` 를 배열로 가지는 class 타입                          |
 | `Day`             | - 하루를 기록할 수 있는 데이터를 가지는 class 타입           |
 | `Colorchips`      | - Emotion의 모든 감정들을 배열로 가지는 ColorChips property가 있는 class 타입 <br/>- 색상을 추가하거나 삭제하는 메서드를 가진다 |
-| `Emotion`         | - `Happy` , `Sad` , `Angry` 와 같은 enum 타입들을 가지는 enum 타입 |
+| `ColorChip`       | - `HappyColorChip` , `SadColorChip` , `AngryColorChip` 과 같은 enum 타입들을 case로 가지는 enum 타입 |
 | `Happy`           | - `Happy` 감정의 color chip의 RGB 값을 가지는 enum 타입      |
 
 
@@ -73,21 +73,21 @@ final class ColorChips {
 
 
 
-### Emotion
+### ColorChip
 
 ```swift
-enum Emotion: CaseIterable {
-	case Happy
-	case Angry
-	case Sad
+enum ColorChip: CaseIterable {
+	case HappyColorChip
+	case AngryColorChip
+	case SadColorChip
 	// 추가 감정
 
-	static let list: [Emotion] = {
-		var emotions = [Emotion]()
-		for emotion in Emotion.allCases {
-			emotions.append(emotion.list)
+	static let list: [ColorChip] = {
+		var colorChips = [ColorChip]()
+		for colorchip in ColorChip.allCases {
+			colorChips.append(colorchip.list)
 		}
-		return emotions
+		return colorChips
 	}()	
 }
 ```
