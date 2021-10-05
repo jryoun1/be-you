@@ -8,7 +8,7 @@
 import UIKit
 
 // TODO: add navigationBar icon, add scrollView(색깔 고르는 뷰 -> 애니메이션 필요한지? / 스펙이 제대로 안 나와서 지금 구현 못함)
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     private enum Design {
         enum Text {
             static let navigationTitle = "색상 기록"
