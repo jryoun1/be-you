@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1BE64D6392E824F39074F696 /* Pods_be_you.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5820D2AB627B7ED3AF6760 /* Pods_be_you.framework */; };
 		26BA6FF2272FF6F000537B68 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 26BA6FF0272FF6F000537B68 /* Model.xcdatamodeld */; };
+		26BA7022272FFE2300537B68 /* Colorchips+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA701E272FFE2300537B68 /* Colorchips+CoreDataClass.swift */; };
+		26BA7023272FFE2300537B68 /* Colorchips+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA701F272FFE2300537B68 /* Colorchips+CoreDataProperties.swift */; };
+		26BA7024272FFE2300537B68 /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA7020272FFE2300537B68 /* Day+CoreDataClass.swift */; };
+		26BA7025272FFE2300537B68 /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA7021272FFE2300537B68 /* Day+CoreDataProperties.swift */; };
 		26E4D4C726EFABDE00315A67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4D4C626EFABDE00315A67 /* AppDelegate.swift */; };
 		26E4D4C926EFABDE00315A67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4D4C826EFABDE00315A67 /* SceneDelegate.swift */; };
 		26E4D4CB26EFABDE00315A67 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4D4CA26EFABDE00315A67 /* MainViewController.swift */; };
@@ -46,6 +50,10 @@
 		0F6148FC346757A0E06016E0 /* Pods-be-you-be-youUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-be-you-be-youUITests.release.xcconfig"; path = "Target Support Files/Pods-be-you-be-youUITests/Pods-be-you-be-youUITests.release.xcconfig"; sourceTree = "<group>"; };
 		102DED5ED86863EE73BE335A /* Pods-be-youTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-be-youTests.release.xcconfig"; path = "Target Support Files/Pods-be-youTests/Pods-be-youTests.release.xcconfig"; sourceTree = "<group>"; };
 		26BA6FF1272FF6F000537B68 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		26BA701E272FFE2300537B68 /* Colorchips+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Colorchips+CoreDataClass.swift"; path = "be-you/Colorchips+CoreDataClass.swift"; sourceTree = "<group>"; };
+		26BA701F272FFE2300537B68 /* Colorchips+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Colorchips+CoreDataProperties.swift"; path = "be-you/Colorchips+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		26BA7020272FFE2300537B68 /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Day+CoreDataClass.swift"; path = "be-you/Day+CoreDataClass.swift"; sourceTree = "<group>"; };
+		26BA7021272FFE2300537B68 /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Day+CoreDataProperties.swift"; path = "be-you/Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		26E4D4C326EFABDE00315A67 /* be-you.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "be-you.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E4D4C626EFABDE00315A67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26E4D4C826EFABDE00315A67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +112,10 @@
 		26E4D4BA26EFABDE00315A67 = {
 			isa = PBXGroup;
 			children = (
+				26BA701E272FFE2300537B68 /* Colorchips+CoreDataClass.swift */,
+				26BA701F272FFE2300537B68 /* Colorchips+CoreDataProperties.swift */,
+				26BA7020272FFE2300537B68 /* Day+CoreDataClass.swift */,
+				26BA7021272FFE2300537B68 /* Day+CoreDataProperties.swift */,
 				26E4D4C526EFABDE00315A67 /* be-you */,
 				26E4D4DC26EFABE000315A67 /* be-youTests */,
 				26E4D4E726EFABE000315A67 /* be-youUITests */,
@@ -439,8 +451,12 @@
 				26E4D4CB26EFABDE00315A67 /* MainViewController.swift in Sources */,
 				CE3ABA61270C2751008EBFE1 /* DateFormatterExtension.swift in Sources */,
 				CEAE182D270ABC770048DAB8 /* UIFontExtension.swift in Sources */,
+				26BA7025272FFE2300537B68 /* Day+CoreDataProperties.swift in Sources */,
+				26BA7022272FFE2300537B68 /* Colorchips+CoreDataClass.swift in Sources */,
+				26BA7024272FFE2300537B68 /* Day+CoreDataClass.swift in Sources */,
 				26BA6FF2272FF6F000537B68 /* Model.xcdatamodeld in Sources */,
 				26E4D4C726EFABDE00315A67 /* AppDelegate.swift in Sources */,
+				26BA7023272FFE2300537B68 /* Colorchips+CoreDataProperties.swift in Sources */,
 				26E4D4C926EFABDE00315A67 /* SceneDelegate.swift in Sources */,
 				CEAE1826270AAFCB0048DAB8 /* UIColorExtension.swift in Sources */,
 			);
