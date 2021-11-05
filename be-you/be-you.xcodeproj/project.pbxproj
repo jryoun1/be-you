@@ -117,6 +117,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26BA702F27351EA600537B68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26BA7030273520C400537B68 /* CoreData */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26BA7030273520C400537B68 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				26BA702627324BCC00537B68 /* CoreDataManager.swift */,
+				26BA70282733782500537B68 /* CoreDataSaveModelPublisher.swift */,
+				26BA702A273396EB00537B68 /* CoreDataFetchResultsPublisher.swift */,
+				26BA702C2733C1D800537B68 /* CoreDataDeleteModelPublisher.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		26E4D4BA26EFABDE00315A67 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +165,7 @@
 		26E4D4C526EFABDE00315A67 /* be-you */ = {
 			isa = PBXGroup;
 			children = (
+				26BA702F27351EA600537B68 /* Model */,
 				CEAE1824270AAFBD0048DAB8 /* Main */,
 				CEAE1823270AAFB80048DAB8 /* Extension */,
 				CEAE182E270ACB360048DAB8 /* Utils */,
@@ -156,10 +176,6 @@
 				26E4D4D426EFABDF00315A67 /* Info.plist */,
 				CEAE1827270ABA620048DAB8 /* Font */,
 				26BA6FF0272FF6F000537B68 /* Model.xcdatamodeld */,
-				26BA702627324BCC00537B68 /* CoreDataManager.swift */,
-				26BA70282733782500537B68 /* CoreDataSaveModelPublisher.swift */,
-				26BA702A273396EB00537B68 /* CoreDataFetchResultsPublisher.swift */,
-				26BA702C2733C1D800537B68 /* CoreDataDeleteModelPublisher.swift */,
 			);
 			path = "be-you";
 			sourceTree = "<group>";
