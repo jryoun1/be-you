@@ -23,3 +23,14 @@ extension EntityCreating {
         T(context: viewContext)
     }
 }
+
+protocol CoreDataFetchResultsPublishing {
+    var viewContext: NSManagedObjectContext { get }
+    func publisher<T: NSManagedObject>(fetch request: NSFetchRequest<T>) -> CoreDataFetchResultsPublisher<T>
+}
+
+extension CoreDataFetchResultsPublishing {
+    func publisher<T: NSManagedObject>(fetch request: NSFetchRequest<T>) -> CoreDataFetchResultsPublisher<T> {
+        return CoreDataFetchResultsPublisher(request: request, context: viewContext)
+    }
+}
