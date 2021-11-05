@@ -12,3 +12,14 @@ extension NSManagedObject {
         return String(describing: self)
     }
 }
+
+protocol EntityCreating {
+    var viewContext: NSManagedObjectContext { get }
+    func createEntity<T: NSManagedObject>() -> T
+}
+
+extension EntityCreating {
+    func createEntity<T: NSManagedObject>() -> T {
+        T(context: viewContext)
+    }
+}
