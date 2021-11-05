@@ -34,3 +34,14 @@ extension CoreDataFetchResultsPublishing {
         return CoreDataFetchResultsPublisher(request: request, context: viewContext)
     }
 }
+
+protocol CoreDataSaveModelPublishing {
+    var viewContext: NSManagedObjectContext { get }
+    func publisher(save action: @escaping Action) -> CoreDataSaveModelPublisher
+}
+
+extension CoreDataSaveModelPublishing {
+    func publisher(save action: @escaping Action) -> CoreDataSaveModelPublisher {
+        return CoreDataSaveModelPublisher(action: action, context: viewContext)
+    }
+}
