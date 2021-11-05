@@ -13,6 +13,10 @@
 		26BA7023272FFE2300537B68 /* Colorchips+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA701F272FFE2300537B68 /* Colorchips+CoreDataProperties.swift */; };
 		26BA7024272FFE2300537B68 /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA7020272FFE2300537B68 /* Day+CoreDataClass.swift */; };
 		26BA7025272FFE2300537B68 /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA7021272FFE2300537B68 /* Day+CoreDataProperties.swift */; };
+		26BA702727324BCC00537B68 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA702627324BCC00537B68 /* CoreDataManager.swift */; };
+		26BA70292733782500537B68 /* CoreDataSaveModelPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA70282733782500537B68 /* CoreDataSaveModelPublisher.swift */; };
+		26BA702B273396EB00537B68 /* CoreDataFetchResultsPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA702A273396EB00537B68 /* CoreDataFetchResultsPublisher.swift */; };
+		26BA702D2733C1D800537B68 /* CoreDataDeleteModelPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA702C2733C1D800537B68 /* CoreDataDeleteModelPublisher.swift */; };
 		26E4D4C726EFABDE00315A67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4D4C626EFABDE00315A67 /* AppDelegate.swift */; };
 		26E4D4C926EFABDE00315A67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4D4C826EFABDE00315A67 /* SceneDelegate.swift */; };
 		26E4D4CB26EFABDE00315A67 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4D4CA26EFABDE00315A67 /* MainViewController.swift */; };
@@ -54,6 +58,10 @@
 		26BA701F272FFE2300537B68 /* Colorchips+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Colorchips+CoreDataProperties.swift"; path = "be-you/Colorchips+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		26BA7020272FFE2300537B68 /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Day+CoreDataClass.swift"; path = "be-you/Day+CoreDataClass.swift"; sourceTree = "<group>"; };
 		26BA7021272FFE2300537B68 /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Day+CoreDataProperties.swift"; path = "be-you/Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		26BA702627324BCC00537B68 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		26BA70282733782500537B68 /* CoreDataSaveModelPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSaveModelPublisher.swift; sourceTree = "<group>"; };
+		26BA702A273396EB00537B68 /* CoreDataFetchResultsPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFetchResultsPublisher.swift; sourceTree = "<group>"; };
+		26BA702C2733C1D800537B68 /* CoreDataDeleteModelPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDeleteModelPublisher.swift; sourceTree = "<group>"; };
 		26E4D4C326EFABDE00315A67 /* be-you.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "be-you.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E4D4C626EFABDE00315A67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26E4D4C826EFABDE00315A67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +156,10 @@
 				26E4D4D426EFABDF00315A67 /* Info.plist */,
 				CEAE1827270ABA620048DAB8 /* Font */,
 				26BA6FF0272FF6F000537B68 /* Model.xcdatamodeld */,
+				26BA702627324BCC00537B68 /* CoreDataManager.swift */,
+				26BA70282733782500537B68 /* CoreDataSaveModelPublisher.swift */,
+				26BA702A273396EB00537B68 /* CoreDataFetchResultsPublisher.swift */,
+				26BA702C2733C1D800537B68 /* CoreDataDeleteModelPublisher.swift */,
 			);
 			path = "be-you";
 			sourceTree = "<group>";
@@ -451,9 +463,13 @@
 				26E4D4CB26EFABDE00315A67 /* MainViewController.swift in Sources */,
 				CE3ABA61270C2751008EBFE1 /* DateFormatterExtension.swift in Sources */,
 				CEAE182D270ABC770048DAB8 /* UIFontExtension.swift in Sources */,
+				26BA702D2733C1D800537B68 /* CoreDataDeleteModelPublisher.swift in Sources */,
+				26BA702B273396EB00537B68 /* CoreDataFetchResultsPublisher.swift in Sources */,
+				26BA70292733782500537B68 /* CoreDataSaveModelPublisher.swift in Sources */,
 				26BA7025272FFE2300537B68 /* Day+CoreDataProperties.swift in Sources */,
 				26BA7022272FFE2300537B68 /* Colorchips+CoreDataClass.swift in Sources */,
 				26BA7024272FFE2300537B68 /* Day+CoreDataClass.swift in Sources */,
+				26BA702727324BCC00537B68 /* CoreDataManager.swift in Sources */,
 				26BA6FF2272FF6F000537B68 /* Model.xcdatamodeld in Sources */,
 				26E4D4C726EFABDE00315A67 /* AppDelegate.swift in Sources */,
 				26BA7023272FFE2300537B68 /* Colorchips+CoreDataProperties.swift in Sources */,
