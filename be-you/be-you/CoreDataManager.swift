@@ -56,3 +56,7 @@ extension CoreDataDeleteModelPublishing {
         return CoreDataDeleteModelPublisher(delete: request, context: viewContext)
     }
 }
+
+protocol CoreDataManaging: EntityCreating, CoreDataSaveModelPublishing, CoreDataFetchResultsPublishing, CoreDataDeleteModelPublishing {
+    var viewContext: NSManagedObjectContext { get }
+}
