@@ -60,3 +60,23 @@ extension CoreDataDeleteModelPublishing {
 protocol CoreDataManaging: EntityCreating, CoreDataSaveModelPublishing, CoreDataFetchResultsPublishing, CoreDataDeleteModelPublishing {
     var viewContext: NSManagedObjectContext { get }
 }
+
+final class CoreDataManager: CoreDataManaging {
+    private let container: NSPersistentContainer
+    var viewContext: NSManagedObjectContext {
+        return self.container.viewContext
+    }
+    
+    static var `default` : CoreDataManager = {
+        return CoreDataManager(name: "Model")
+    }()
+    
+    private init(name: String) {
+        self.container = NSPersistentContainer(name: name)
+        self.container.loadPersistentStores { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        }
+    }
+}
