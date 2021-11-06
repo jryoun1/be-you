@@ -61,6 +61,10 @@ protocol CoreDataManaging: EntityCreating, CoreDataSaveModelPublishing, CoreData
     var viewContext: NSManagedObjectContext { get }
 }
 
+enum StorageType {
+    case persistent, inMemory
+}
+
 final class CoreDataManager: CoreDataManaging {
     private let container: NSPersistentContainer
     var viewContext: NSManagedObjectContext {
