@@ -72,15 +72,24 @@ final class CoreDataManager: CoreDataManaging {
     }
     
     static var `default` : CoreDataManager = {
-        return CoreDataManager(name: "Model")
+        return CoreDataManager(name: "Model", in: .persistent)
     }()
     
-    private init(name: String) {
+    init(name: String, in memory: StorageType) {
         self.container = NSPersistentContainer(name: name)
+        self.setupIfMemoryStorage(memory)
         self.container.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
+        }
+    }
+    
+    private func setupIfMemoryStorage(_ storageType: StorageType) {
+        if storageType == .inMemory {
+            let persistentStoreDescription = NSPersistentStoreDescription()
+            persistentStoreDescription.type = NSInMemoryStoreType
+            self.container.persistentStoreDescriptions = [persistentStoreDescription]
         }
     }
 }
