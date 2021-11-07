@@ -21,4 +21,11 @@ final class TestCoreDataStack: XCTestCase {
         bag = []
         coreDataManager = CoreDataManager(name: "Model", in: .inMemory)
     }
+
+    override func tearDown() {
+        super.tearDown()
+        coreDataManager = nil
+        dayList = []
+        bag = []
+    }
 }
