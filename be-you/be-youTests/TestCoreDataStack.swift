@@ -92,6 +92,46 @@ final class TestCoreDataStack: XCTestCase {
         XCTAssertEqual(self.dayList.first?.diary, "정말 화가 많이 난다,, 퇴사하고 싶다")
     }
     
+    func testDeleteDayModel() {
+        // save
+        let action: Action = {
+            let day: Day = self.coreDataManager.createEntity()
+            day.hashtags = ["빡침", "짜증나", "퇴사"]
+            day.date = Date()
+            day.diary = "정말 화가 많이 난다,, 퇴사하고 싶다"
+            day.rgbHEX = "AB4253"
+        }
+        
+        coreDataManager
+            .publisher(save: action)
+            .sink { completion in
+                if case .failure(let error) = completion {
+                    print(error.localizedDescription)
+                }
+            } receiveValue: { success in
+                XCTAssertTrue(success)
+            }
+            .store(in: &bag)
+        
+        // delete
+        var isDeleted = false
+        let deleteRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Day.entityName)
+        deleteRequest.predicate = NSPredicate(format: "%@ == rgbHEX", "AB4253")
+        
+        coreDataManager
+            .publisher(delete: deleteRequest)
+            .sink { completion in
+                if case .failure(let error) = completion {
+                    print(error.localizedDescription)
+                }
+            } receiveValue: { _ in
+                isDeleted = true
+            }
+            .store(in: &bag)
+        
+        XCTAssertTrue(isDeleted)
+    }
+    
     override func tearDown() {
         super.tearDown()
         coreDataManager = nil
