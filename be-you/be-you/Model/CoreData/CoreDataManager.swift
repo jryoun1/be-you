@@ -88,7 +88,7 @@ final class CoreDataManager: CoreDataManaging {
     private func setupIfMemoryStorage(_ storageType: StorageType) {
         if storageType == .inMemory {
             let persistentStoreDescription = NSPersistentStoreDescription()
-            persistentStoreDescription.type = NSInMemoryStoreType
+            persistentStoreDescription.url = URL(fileURLWithPath: "/dev/null")
             self.container.persistentStoreDescriptions = [persistentStoreDescription]
         }
     }
