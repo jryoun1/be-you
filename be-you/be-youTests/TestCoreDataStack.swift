@@ -14,4 +14,11 @@ final class TestCoreDataStack: XCTestCase {
     private var dayList: [Day]!
     private var bag: [AnyCancellable]!
     private var coreDataManager: CoreDataManager!
+    
+    override func setUp() {
+        super.setUp()
+        dayList = []
+        bag = []
+        coreDataManager = CoreDataManager(name: "Model", in: .inMemory)
+    }
 }
