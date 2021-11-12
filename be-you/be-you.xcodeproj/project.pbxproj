@@ -17,6 +17,7 @@
 		26BA70292733782500537B68 /* CoreDataSaveModelPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA70282733782500537B68 /* CoreDataSaveModelPublisher.swift */; };
 		26BA702B273396EB00537B68 /* CoreDataFetchResultsPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA702A273396EB00537B68 /* CoreDataFetchResultsPublisher.swift */; };
 		26BA702D2733C1D800537B68 /* CoreDataDeleteModelPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA702C2733C1D800537B68 /* CoreDataDeleteModelPublisher.swift */; };
+		26CAD490273E316C006BCA2F /* ColorRecordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAD48F273E316C006BCA2F /* ColorRecordsViewModel.swift */; };
 		26E4D4C726EFABDE00315A67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4D4C626EFABDE00315A67 /* AppDelegate.swift */; };
 		26E4D4C926EFABDE00315A67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4D4C826EFABDE00315A67 /* SceneDelegate.swift */; };
 		26E4D4CB26EFABDE00315A67 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4D4CA26EFABDE00315A67 /* MainViewController.swift */; };
@@ -62,6 +63,7 @@
 		26BA70282733782500537B68 /* CoreDataSaveModelPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSaveModelPublisher.swift; sourceTree = "<group>"; };
 		26BA702A273396EB00537B68 /* CoreDataFetchResultsPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFetchResultsPublisher.swift; sourceTree = "<group>"; };
 		26BA702C2733C1D800537B68 /* CoreDataDeleteModelPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDeleteModelPublisher.swift; sourceTree = "<group>"; };
+		26CAD48F273E316C006BCA2F /* ColorRecordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRecordsViewModel.swift; sourceTree = "<group>"; };
 		26E4D4C326EFABDE00315A67 /* be-you.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "be-you.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E4D4C626EFABDE00315A67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26E4D4C826EFABDE00315A67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,14 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		26CAD491273E4509006BCA2F /* ColorRecords */ = {
+			isa = PBXGroup;
+			children = (
+				26CAD48F273E316C006BCA2F /* ColorRecordsViewModel.swift */,
+			);
+			path = ColorRecords;
+			sourceTree = "<group>";
+		};
 		26E4D4BA26EFABDE00315A67 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 		26E4D4C526EFABDE00315A67 /* be-you */ = {
 			isa = PBXGroup;
 			children = (
+				26CAD491273E4509006BCA2F /* ColorRecords */,
 				26BA702F27351EA600537B68 /* Model */,
 				CEAE1824270AAFBD0048DAB8 /* Main */,
 				CEAE1823270AAFB80048DAB8 /* Extension */,
@@ -479,6 +490,7 @@
 				26E4D4CB26EFABDE00315A67 /* MainViewController.swift in Sources */,
 				CE3ABA61270C2751008EBFE1 /* DateFormatterExtension.swift in Sources */,
 				CEAE182D270ABC770048DAB8 /* UIFontExtension.swift in Sources */,
+				26CAD490273E316C006BCA2F /* ColorRecordsViewModel.swift in Sources */,
 				26BA702D2733C1D800537B68 /* CoreDataDeleteModelPublisher.swift in Sources */,
 				26BA702B273396EB00537B68 /* CoreDataFetchResultsPublisher.swift in Sources */,
 				26BA70292733782500537B68 /* CoreDataSaveModelPublisher.swift in Sources */,
