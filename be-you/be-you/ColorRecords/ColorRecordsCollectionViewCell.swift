@@ -25,9 +25,22 @@ final class ColorRecordsCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configureLayout()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        configureLayout()
+    }
+    
+    private func configureLayout() {
+        contentView.addSubview(colorView)
+        
+        NSLayoutConstraint.activate([
+            colorView.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor),
+            colorView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor),
+            colorView.widthAnchor.constraint(equalToConstant: Design.Size.circleWidth),
+            colorView.heightAnchor.constraint(equalTo: colorView.widthAnchor)
+        ])
     }
 }
