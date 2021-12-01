@@ -43,4 +43,9 @@ final class ColorRecordsCollectionViewCell: UICollectionViewCell {
             colorView.heightAnchor.constraint(equalTo: colorView.widthAnchor)
         ])
     }
+    
+    func configure(color: UIColor) {
+        colorView.backgroundColor = color
+        colorView.layer.borderColor = UIColor.blue.cgColor
+    }
 }
