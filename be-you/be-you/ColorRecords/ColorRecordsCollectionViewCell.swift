@@ -48,4 +48,10 @@ final class ColorRecordsCollectionViewCell: UICollectionViewCell {
         colorView.backgroundColor = color
         colorView.layer.borderColor = UIColor.blue.cgColor
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        colorView.backgroundColor = nil
+        colorView.layer.borderColor = nil
+    }
 }
