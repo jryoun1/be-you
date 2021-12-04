@@ -27,6 +27,7 @@
 		26E4D4DE26EFABE000315A67 /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4D4DD26EFABE000315A67 /* TestCoreDataStack.swift */; };
 		26E4D4E926EFABE000315A67 /* be_youUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4D4E826EFABE000315A67 /* be_youUITests.swift */; };
 		26E9C0062756598700133C4E /* ColorRecordsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E9C0052756598700133C4E /* ColorRecordsCollectionViewCell.swift */; };
+		26E9C008275B616700133C4E /* ColorRecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E9C007275B616700133C4E /* ColorRecordDetailViewController.swift */; };
 		51257204AA2F5ED236796AE2 /* Pods_be_you_be_youUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0EFFD4EA35735D933D5653 /* Pods_be_you_be_youUITests.framework */; };
 		9A269A1169628A701F6C7879 /* Pods_be_youTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11B3E1E78824AF9C4A2C2FF /* Pods_be_youTests.framework */; };
 		CE3ABA61270C2751008EBFE1 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3ABA60270C2751008EBFE1 /* DateFormatterExtension.swift */; };
@@ -81,6 +82,7 @@
 		26E4D4E826EFABE000315A67 /* be_youUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = be_youUITests.swift; sourceTree = "<group>"; };
 		26E4D4EA26EFABE000315A67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26E9C0052756598700133C4E /* ColorRecordsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRecordsCollectionViewCell.swift; sourceTree = "<group>"; };
+		26E9C007275B616700133C4E /* ColorRecordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRecordDetailViewController.swift; sourceTree = "<group>"; };
 		28CDDE1E2F5069648457F70B /* Pods-be-you.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-be-you.debug.xcconfig"; path = "Target Support Files/Pods-be-you/Pods-be-you.debug.xcconfig"; sourceTree = "<group>"; };
 		2C0EFFD4EA35735D933D5653 /* Pods_be_you_be_youUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_be_you_be_youUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E1905BFACD869318C1DFC2E /* Pods-be-you-be-youUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-be-you-be-youUITests.debug.xcconfig"; path = "Target Support Files/Pods-be-you-be-youUITests/Pods-be-you-be-youUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				26CAD48F273E316C006BCA2F /* ColorRecordsViewModel.swift */,
 				26CAD492273E456E006BCA2F /* ColorRecordsViewController.swift */,
 				26E9C0052756598700133C4E /* ColorRecordsCollectionViewCell.swift */,
+				26E9C007275B616700133C4E /* ColorRecordDetailViewController.swift */,
 			);
 			path = ColorRecords;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				26CAD490273E316C006BCA2F /* ColorRecordsViewModel.swift in Sources */,
 				26BA702D2733C1D800537B68 /* CoreDataDeleteModelPublisher.swift in Sources */,
 				26BA702B273396EB00537B68 /* CoreDataFetchResultsPublisher.swift in Sources */,
+				26E9C008275B616700133C4E /* ColorRecordDetailViewController.swift in Sources */,
 				26BA70292733782500537B68 /* CoreDataSaveModelPublisher.swift in Sources */,
 				26BA7025272FFE2300537B68 /* Day+CoreDataProperties.swift in Sources */,
 				26BA7022272FFE2300537B68 /* Colorchips+CoreDataClass.swift in Sources */,
